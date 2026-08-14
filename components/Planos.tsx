@@ -3,6 +3,7 @@ import { Check, Star, ShieldCheck, Zap } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
+import { CHECKOUT_URL_BASICO, CHECKOUT_URL_COMPLETO } from "@/lib/config";
 
 const basicoItens = [
   "Os 50 jogos, nas 5 dificuldades",
@@ -74,7 +75,11 @@ export default function Planos() {
               ))}
             </ul>
 
-            <CtaButton variant="secondary" className="mt-6 w-full">
+            <CtaButton
+              href={CHECKOUT_URL_BASICO}
+              variant="secondary"
+              className="mt-6 w-full"
+            >
               Quero os 50 jogos
             </CtaButton>
           </div>
@@ -133,7 +138,9 @@ export default function Planos() {
               ))}
             </ul>
 
-            <CtaButton className="mt-6 w-full">Quero o kit completo</CtaButton>
+            <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-6 w-full">
+              Quero o kit completo
+            </CtaButton>
 
             <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5">
               <div className="flex items-center gap-1.5 font-body text-[12px] text-muted">
