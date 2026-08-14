@@ -3,25 +3,40 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-brand: #5b21b6;
+  --color-brand-dark: #2e1065;
+  --color-brand-vivid: #7c3aed;
+  --color-brand-tint: #f7f2ff;
+  --color-brand-tint-2: #f0e9ff;
+  --color-brand-lavender: #a78bfa;
+  --color-cream: #faf7ff;
+  --color-warmwhite: #ffffff;
+  --color-pink: #ec4899;
+  --color-graphite: #1e1332;
+  --color-muted: #6b637e;
+  --color-border-soft: #e4d9fb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-graphite);
+  background: var(--color-cream);
+  overflow-x: hidden;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

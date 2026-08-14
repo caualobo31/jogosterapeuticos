@@ -1,0 +1,182 @@
+"use client";
+
+import { useRef, useState } from "react";
+import Image from "next/image";
+import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import Section from "./Section";
+import Reveal from "./Reveal";
+import ScrollCue from "./ScrollCue";
+
+const depoimentos = [
+  {
+    quote:
+      "Eu terminava a sessão insegura, sem saber se tinha ajudado. Agora chego com o jogo certo pra dificuldade da criança e a sessão flui sozinha. Foi o que faltava depois da pós.",
+    nome: "Mariana R.",
+    papel: "Psicopedagoga clínica",
+    cidade: "Belo Horizonte",
+    foto: "/images/mulher1.avif",
+  },
+  {
+    quote:
+      "A criança que não parava quieta com ficha ficou o atendimento inteiro envolvida no jogo da trilha. Os pais notaram a diferença na devolutiva. Material que se paga no primeiro uso.",
+    nome: "Camila S.",
+    papel: "Psicopedagoga",
+    cidade: "Curitiba",
+    foto: "/images/mulher2.jpg",
+  },
+  {
+    quote:
+      "Eu perdia domingo inteiro montando material. Agora é abrir, imprimir e aplicar. Recuperei meu tempo e ainda melhorei a qualidade da sessão.",
+    nome: "Juliana A.",
+    papel: "Psicopedagoga clínica",
+    cidade: "Recife",
+    foto: "/images/mulher3.png",
+  },
+  {
+    quote:
+      "O guia com o que observar em cada jogo mudou meu jeito de trabalhar. Deixei de só aplicar atividade e passei a enxergar o que a criança revela. Chego na devolutiva sabendo o que falar.",
+    nome: "Patrícia M.",
+    papel: "Psicopedagoga",
+    cidade: "Campinas",
+    foto: null,
+  },
+];
+
+export default function Depoimentos() {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  function scrollToIndex(index: number) {
+    const el = scrollerRef.current;
+    if (!el) return;
+    const card = el.children[index] as HTMLElement | undefined;
+    if (!card) return;
+    el.scrollTo({
+      left: card.offsetLeft - el.offsetLeft,
+      behavior: "smooth",
+    });
+    setActive(index);
+  }
+
+  function handleScroll() {
+    const el = scrollerRef.current;
+    if (!el) return;
+    let closest = 0;
+    let closestDist = Infinity;
+    Array.from(el.children).forEach((child, i) => {
+      const c = child as HTMLElement;
+      const dist = Math.abs(c.offsetLeft - el.offsetLeft - el.scrollLeft);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = i;
+      }
+    });
+    setActive(closest);
+  }
+
+  return (
+    <Section bg="cream">
+      <Reveal>
+        <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
+          Quem já usa
+        </p>
+        <h2 className="mt-2 font-heading text-[22px] font-semibold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+          Psicopedagogas que <span className="text-brand">pararam</span> de
+          improvisar
+        </h2>
+
+        <div className="relative mt-8">
+          <div
+            ref={scrollerRef}
+            onScroll={handleScroll}
+            className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2"
+          >
+            {depoimentos.map((d) => (
+              <div
+                key={d.nome}
+                className="flex w-[82%] shrink-0 snap-center flex-col rounded-card border border-bordersoft bg-warmwhite p-6 text-left sm:w-[46%] lg:w-[31%]"
+              >
+                <div className="flex gap-0.5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-4 w-4 fill-brand text-brand"
+                    />
+                  ))}
+                </div>
+                <p className="mt-4 font-editorial text-[15px] italic leading-relaxed text-graphite">
+                  &ldquo;{d.quote}&rdquo;
+                </p>
+                <div className="mt-5 flex items-center gap-3">
+                  {d.foto ? (
+                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
+                      <Image
+                        src={d.foto}
+                        alt={d.nome}
+                        fill
+                        sizes="40px"
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-tint2 font-heading text-[13px] font-semibold text-brand">
+                      {d.nome.charAt(0)}
+                    </div>
+                  )}
+                  <div>
+                    <p className="font-heading text-[13px] font-semibold text-graphite">
+                      {d.nome}
+                    </p>
+                    <p className="font-body text-[12px] text-muted">
+                      {d.papel} · {d.cidade}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => scrollToIndex(Math.max(0, active - 1))}
+            aria-label="Depoimento anterior"
+            className="absolute left-0 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-bordersoft bg-warmwhite p-2 shadow-md sm:flex"
+          >
+            <ChevronLeft className="h-4 w-4 text-brand" />
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              scrollToIndex(Math.min(depoimentos.length - 1, active + 1))
+            }
+            aria-label="Próximo depoimento"
+            className="absolute right-0 top-1/2 hidden -translate-y-1/2 translate-x-1/2 items-center justify-center rounded-full border border-bordersoft bg-warmwhite p-2 shadow-md sm:flex"
+          >
+            <ChevronRight className="h-4 w-4 text-brand" />
+          </button>
+        </div>
+
+        <div className="mt-5 flex items-center justify-center gap-2">
+          {depoimentos.map((d, i) => (
+            <button
+              key={d.nome}
+              type="button"
+              onClick={() => scrollToIndex(i)}
+              aria-label={`Ir para o depoimento de ${d.nome}`}
+              className={`h-2 rounded-full transition-all ${
+                active === i ? "w-6 bg-brand" : "w-2 bg-brand-lavender"
+              }`}
+            />
+          ))}
+        </div>
+
+        <p className="mx-auto mt-6 max-w-[440px] font-body text-[12.5px] leading-relaxed text-muted">
+          Jogos na linha de Fernández, Bossa, PIAFEX e Simaia Sampaio. Nada
+          aqui substitui a sua avaliação.
+        </p>
+
+        <ScrollCue to="bonus" label="Ver a próxima seção" />
+      </Reveal>
+    </Section>
+  );
+}
