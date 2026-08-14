@@ -26,10 +26,10 @@ export default function Hero() {
         </p>
 
         <Image
-          src="/images/hero-mockup.png"
+          src="/images/hero-mockup.webp"
           alt="Kit +50 Jogos Terapêuticos: caixa premium, cartas, cadernos de atividades, fichas e peças do material impresso"
-          width={1448}
-          height={1086}
+          width={920}
+          height={690}
           priority
           className="mx-auto mt-6 h-auto w-full max-w-[380px] sm:max-w-[460px]"
         />

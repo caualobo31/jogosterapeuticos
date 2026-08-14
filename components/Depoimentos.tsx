@@ -14,7 +14,7 @@ const depoimentos = [
     nome: "Mariana R.",
     papel: "Psicopedagoga clínica",
     cidade: "Belo Horizonte",
-    foto: "/images/mulher1.avif",
+    foto: "/images/mulher1.webp",
   },
   {
     quote:
@@ -22,7 +22,7 @@ const depoimentos = [
     nome: "Camila S.",
     papel: "Psicopedagoga",
     cidade: "Curitiba",
-    foto: "/images/mulher2.jpg",
+    foto: "/images/mulher2.webp",
   },
   {
     quote:
@@ -30,7 +30,7 @@ const depoimentos = [
     nome: "Juliana A.",
     papel: "Psicopedagoga clínica",
     cidade: "Recife",
-    foto: "/images/mulher3.png",
+    foto: "/images/mulher3.webp",
   },
   {
     quote:

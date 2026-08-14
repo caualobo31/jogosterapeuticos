@@ -5,35 +5,35 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const imagens = [
   {
-    src: "/images/carrossel/01-categorias.png",
+    src: "/images/carrossel/01-categorias.webp",
     alt: "As 5 categorias do material: Dislexia, Discalculia, TDAH, Disgrafia e Disortografia",
   },
   {
-    src: "/images/carrossel/02-trilha-dos-sons.png",
+    src: "/images/carrossel/02-trilha-dos-sons.webp",
     alt: "Jogo Trilha dos Sons, de consciência fonológica, impresso",
   },
   {
-    src: "/images/carrossel/03-memoria-dislexia.png",
+    src: "/images/carrossel/03-memoria-dislexia.webp",
     alt: "Jogo da memória de Dislexia, cartas prontas para recortar",
   },
   {
-    src: "/images/carrossel/04-domino-quantidades.png",
+    src: "/images/carrossel/04-domino-quantidades.webp",
     alt: "Dominó de quantidades, jogo de Discalculia",
   },
   {
-    src: "/images/carrossel/05-trilha-do-foco.png",
+    src: "/images/carrossel/05-trilha-do-foco.webp",
     alt: "Trilha do Foco, jogo de TDAH com dado para montar",
   },
   {
-    src: "/images/carrossel/06-jogo-das-silabas.png",
+    src: "/images/carrossel/06-jogo-das-silabas.webp",
     alt: "Jogo das sílabas, cartas e dominó para recortar",
   },
   {
-    src: "/images/carrossel/07-bingo-ortografico.png",
+    src: "/images/carrossel/07-bingo-ortografico.webp",
     alt: "Bingo Ortográfico, jogo de Disortografia",
   },
   {
-    src: "/images/carrossel/08-como-jogar.png",
+    src: "/images/carrossel/08-como-jogar.webp",
     alt: "Ficha de Como Jogar, passo a passo de aplicação de cada jogo",
   },
 ];
@@ -61,8 +61,8 @@ export default function Carrossel() {
             <Image
               src={img.src}
               alt={img.alt}
-              width={1055}
-              height={1491}
+              width={450}
+              height={636}
               className="h-auto w-full"
               sizes="210px"
             />

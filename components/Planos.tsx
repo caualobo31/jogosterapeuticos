@@ -46,7 +46,7 @@ export default function Planos() {
 
             <div className="relative mx-auto mt-4 aspect-[4/3] w-[55%]">
               <Image
-                src="/images/mockup-simples-jg.png"
+                src="/images/mockup-simples-jg.webp"
                 alt="Caixa do Kit +50 Jogos Terapêuticos"
                 fill
                 sizes="160px"
@@ -94,7 +94,7 @@ export default function Planos() {
 
             <div className="relative mt-4 aspect-[4/3] w-full">
               <Image
-                src="/images/hero-mockup.png"
+                src="/images/hero-mockup.webp"
                 alt="Kit +50 Jogos Terapêuticos: caixa premium, cartas, cadernos de atividades e fichas do material impresso"
                 fill
                 sizes="(min-width: 640px) 320px, 90vw"
