@@ -55,7 +55,7 @@ export default function Planos() {
               />
             </div>
 
-            <p className="mt-4 font-heading text-[26px] font-bold text-brand">
+            <p className="mt-4 font-heading text-[34px] font-bold text-brand">
               R$ 19,90
             </p>
             <p className="mt-0.5 font-body text-[12.5px] text-muted">
@@ -110,7 +110,7 @@ export default function Planos() {
             <p className="mt-4 font-body text-[12.5px] text-red-600 line-through">
               de R$ 207,00
             </p>
-            <p className="mt-0.5 font-heading text-[28px] font-bold text-brand">
+            <p className="mt-0.5 font-heading text-[38px] font-bold text-brand">
               R$ 37,90
             </p>
             <p className="mt-1 font-body text-[13px] font-semibold text-green-700">
