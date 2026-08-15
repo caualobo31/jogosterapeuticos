@@ -5,25 +5,25 @@ import CtaButton from "./CtaButton";
 
 const bonus = [
   {
-    capa: "/images/bonus/capa-guia-aplicacao.png",
+    capa: "/images/bonus/capa-guia-aplicacao.webp",
     nome: "Guia de Aplicação Clínica",
     copy: "O que observar em cada jogo, o que a criança revela e como intervir. Sua maior dúvida vira um plano.",
     preco: "R$ 47",
   },
   {
-    capa: "/images/bonus/capa-fichas-registro.png",
+    capa: "/images/bonus/capa-fichas-registro.webp",
     nome: "Fichas de Registro e Evolução",
     copy: "Uma ficha por sessão pra acompanhar o progresso e ter o que mostrar pros pais.",
     preco: "R$ 27",
   },
   {
-    capa: "/images/bonus/capa-roteiro-devolutiva.png",
+    capa: "/images/bonus/capa-roteiro-devolutiva.webp",
     nome: "Roteiro de Devolutiva",
     copy: "O passo a passo pra explicar o que você viu pra pais e escola, com clareza e sem soar laudo.",
     preco: "R$ 37",
   },
   {
-    capa: "/images/bonus/capa-planejamentos.png",
+    capa: "/images/bonus/capa-planejamentos.webp",
     nome: "Planejamentos de Sessão Prontos",
     copy: "Sessões já montadas, combinando os jogos por objetivo. Você abre e aplica, zero improviso.",
     preco: "R$ 29",
