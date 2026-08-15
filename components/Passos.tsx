@@ -45,12 +45,12 @@ export default function Passos() {
                 <strong className="font-semibold">{lead}</strong>
                 {resto}
               </p>
-              <div className="relative mt-4 aspect-square w-full overflow-hidden rounded-card border border-bordersoft shadow-md shadow-brand/10">
+              <div className="relative mt-4 h-20 w-20 shrink-0 overflow-hidden rounded-card border border-bordersoft shadow-sm shadow-brand/10">
                 <Image
                   src={foto}
                   alt={alt}
                   fill
-                  sizes="(min-width: 640px) 160px, 90vw"
+                  sizes="80px"
                   className="object-cover"
                 />
               </div>
