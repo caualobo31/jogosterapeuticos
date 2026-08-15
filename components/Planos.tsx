@@ -37,7 +37,7 @@ export default function Planos() {
 
         <div className="mx-auto mt-8 grid max-w-[600px] grid-cols-1 items-start gap-5 sm:grid-cols-2">
           {/* Básico */}
-          <div className="order-2 rounded-card border border-bordersoft bg-warmwhite p-6 opacity-90 sm:order-1">
+          <div className="rounded-card border border-bordersoft bg-warmwhite p-6 opacity-90">
             <p className="font-heading text-[15px] font-semibold text-graphite">
               Básico
             </p>
@@ -85,7 +85,7 @@ export default function Planos() {
           </div>
 
           {/* Completo */}
-          <div className="order-1 relative rounded-card border-2 border-brand bg-warmwhite p-7 shadow-xl shadow-brand/15 sm:order-2 sm:p-8">
+          <div className="relative rounded-card border-2 border-brand bg-warmwhite p-7 shadow-xl shadow-brand/15 sm:p-8">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-to-r from-brand-dark to-brand-vivid px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-wide text-white">
               Mais escolhido · Melhor custo
             </span>
