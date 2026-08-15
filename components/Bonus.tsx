@@ -1,29 +1,29 @@
-import { Eye, ClipboardList, MessageCircle, CalendarCheck } from "lucide-react";
+import Image from "next/image";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
 
 const bonus = [
   {
-    icon: Eye,
+    capa: "/images/bonus/capa-guia-aplicacao.png",
     nome: "Guia de Aplicação Clínica",
     copy: "O que observar em cada jogo, o que a criança revela e como intervir. Sua maior dúvida vira um plano.",
     preco: "R$ 47",
   },
   {
-    icon: ClipboardList,
+    capa: "/images/bonus/capa-fichas-registro.png",
     nome: "Fichas de Registro e Evolução",
     copy: "Uma ficha por sessão pra acompanhar o progresso e ter o que mostrar pros pais.",
     preco: "R$ 27",
   },
   {
-    icon: MessageCircle,
+    capa: "/images/bonus/capa-roteiro-devolutiva.png",
     nome: "Roteiro de Devolutiva",
     copy: "O passo a passo pra explicar o que você viu pra pais e escola, com clareza e sem soar laudo.",
     preco: "R$ 37",
   },
   {
-    icon: CalendarCheck,
+    capa: "/images/bonus/capa-planejamentos.png",
     nome: "Planejamentos de Sessão Prontos",
     copy: "Sessões já montadas, combinando os jogos por objetivo. Você abre e aplica, zero improviso.",
     preco: "R$ 29",
@@ -44,13 +44,19 @@ export default function Bonus() {
         </p>
 
         <div className="mx-auto mt-8 grid max-w-[600px] grid-cols-1 gap-5 sm:grid-cols-2">
-          {bonus.map(({ icon: Icon, nome, copy, preco }) => (
+          {bonus.map(({ capa, nome, copy, preco }) => (
             <div
               key={nome}
-              className="rounded-card border border-bordersoft bg-cream p-6 text-left"
+              className="rounded-card border border-bordersoft bg-cream p-5 text-left"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-tint2">
-                <Icon className="h-5 w-5 text-brand" />
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-md shadow-brand/10">
+                <Image
+                  src={capa}
+                  alt={`Capa do bônus: ${nome}`}
+                  fill
+                  sizes="(min-width: 640px) 280px, 45vw"
+                  className="object-cover"
+                />
               </div>
               <p className="mt-4 font-heading text-[15px] font-semibold text-graphite">
                 {nome}
