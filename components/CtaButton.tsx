@@ -1,3 +1,5 @@
+"use client";
+
 import { CHECKOUT_URL } from "@/lib/config";
 
 type CtaButtonProps = {
@@ -20,8 +22,23 @@ export default function CtaButton({
       ? "bg-gradient-to-r from-brand-dark to-brand-vivid text-white shadow-lg shadow-brand/25"
       : "bg-brand-lavender text-graphite";
 
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    // Âncoras internas (#planos etc.) navegam normalmente, sem redirecionamento forçado.
+    if (href.startsWith("#")) return;
+
+    e.preventDefault();
+    const params = window.location.search;
+    const separator = href.includes("?") ? "&" : "?";
+    const destino = params ? `${href}${separator}${params.slice(1)}` : href;
+    window.location.href = destino;
+  }
+
   return (
-    <a href={href} className={`${base} ${styles} ${className}`}>
+    <a
+      href={href}
+      onClick={handleClick}
+      className={`${base} ${styles} ${className}`}
+    >
       {children}
     </a>
   );
