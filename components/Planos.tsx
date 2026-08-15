@@ -108,12 +108,15 @@ export default function Planos() {
             </div>
 
             <p className="mt-4 font-body text-[12.5px] text-red-600 line-through">
-              de R$ 67,00
+              de R$ 207,00
             </p>
             <p className="mt-0.5 font-heading text-[28px] font-bold text-brand">
               R$ 37,90
             </p>
-            <p className="mt-0.5 font-body text-[12.5px] text-muted">
+            <p className="mt-1 font-body text-[13px] font-semibold text-green-700">
+              Você economiza R$ 169,10
+            </p>
+            <p className="mt-1 font-body text-[12.5px] text-muted">
               à vista no Pix ou 12x de R$ 3,90
             </p>
 
