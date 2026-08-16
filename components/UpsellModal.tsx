@@ -5,7 +5,10 @@ import { createPortal } from "react-dom";
 import Image from "next/image";
 import { X } from "lucide-react";
 import CtaButton from "./CtaButton";
-import { CHECKOUT_URL_BASICO, CHECKOUT_URL_COMPLETO } from "@/lib/config";
+import {
+  CHECKOUT_URL_BASICO,
+  CHECKOUT_URL_COMPLETO_PROMO,
+} from "@/lib/config";
 
 export default function UpsellModal() {
   const [open, setOpen] = useState(false);
@@ -93,7 +96,10 @@ export default function UpsellModal() {
                 só nesta oferta
               </p>
 
-              <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-5 w-full">
+              <CtaButton
+                href={CHECKOUT_URL_COMPLETO_PROMO}
+                className="mt-5 w-full"
+              >
                 Sim, quero o Completo por R$ 29,90
               </CtaButton>
 
