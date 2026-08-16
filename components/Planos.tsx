@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Check, Star, ShieldCheck, Zap } from "lucide-react";
+import { Check, Star, ShieldCheck, Zap, ArrowDown } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
@@ -84,6 +84,13 @@ export default function Planos() {
             >
               Quero os 50 jogos
             </CtaButton>
+
+            <div className="mt-4 flex flex-col items-center gap-1.5 rounded-card bg-brand-tint2 px-3 py-3 text-center">
+              <p className="font-body text-[12px] font-semibold leading-snug text-brand">
+                92% das psicopedagogas escolhem o Completo
+              </p>
+              <ArrowDown className="h-4 w-4 text-brand" aria-hidden="true" />
+            </div>
           </div>
 
           {/* Completo */}
