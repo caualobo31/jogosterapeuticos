@@ -13,7 +13,7 @@ export default function Virada() {
   return (
     <Section bg="tint" id="virada">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Você já sabe o porquê. Faltava{" "}
           <span className="text-brand">o como</span>.
         </h2>

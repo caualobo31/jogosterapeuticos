@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <Section bg="cream" className="pt-6">
       <Reveal>
-        <h1 className="font-heading text-[26px] font-extrabold uppercase leading-tight tracking-wide text-graphite sm:text-[32px]">
+        <h1 className="font-heading text-[26px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[32px]">
           <span className="text-brand">+50 jogos terapêuticos</span> prontos
           para cada <span className="text-brand">dificuldade de aprendizagem</span>
         </h1>

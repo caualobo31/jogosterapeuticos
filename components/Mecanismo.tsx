@@ -32,7 +32,7 @@ export default function Mecanismo() {
         <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
           Não são fichas
         </p>
-        <h2 className="mt-2 font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="mt-2 font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           São <span className="text-brand">jogos de verdade</span>, por dificuldade
         </h2>
         <p className="mx-auto mt-4 max-w-[460px] font-body text-[15px] leading-relaxed text-muted">

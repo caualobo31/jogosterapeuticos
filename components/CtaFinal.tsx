@@ -6,7 +6,7 @@ export default function CtaFinal() {
   return (
     <Section bg="cream" id="cta-final">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Sua próxima sessão pode ser <span className="text-brand">diferente</span>
         </h2>
         <p className="mx-auto mt-4 max-w-[420px] font-body text-[15px] leading-relaxed text-muted">

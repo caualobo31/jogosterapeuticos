@@ -28,7 +28,7 @@ export default function Planos() {
   return (
     <Section bg="cream" id="planos">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Escolha como <span className="text-brand">começar</span>
         </h2>
         <p className="mx-auto mt-3 max-w-[380px] font-body text-[13.5px] leading-relaxed text-muted">
