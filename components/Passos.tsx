@@ -31,7 +31,7 @@ export default function Passos() {
   return (
     <Section bg="white" id="passos">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-semibold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Do PDF à sessão em <span className="text-brand">3 passos</span>
         </h2>
 

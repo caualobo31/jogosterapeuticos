@@ -80,7 +80,7 @@ export default function Depoimentos() {
         <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
           Quem já usa
         </p>
-        <h2 className="mt-2 font-heading text-[22px] font-semibold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="mt-2 font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Psicopedagogas que <span className="text-brand">pararam</span> de
           improvisar
         </h2>

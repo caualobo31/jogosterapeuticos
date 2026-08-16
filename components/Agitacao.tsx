@@ -14,7 +14,7 @@ export default function Agitacao() {
   return (
     <Section bg="white">
       <Reveal>
-        <p className="font-heading text-[17px] font-semibold leading-snug text-graphite">
+        <p className="font-heading text-[17px] font-extrabold leading-snug text-graphite">
           A teoria você tem. Mas quando a criança senta na sua frente:{" "}
           <span className="text-brand">o que eu coloco na mesa agora?</span>
         </p>

@@ -34,7 +34,7 @@ export default function Bonus() {
   return (
     <Section bg="white" id="bonus">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-semibold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           4 <span className="text-brand">bônus</span> que vêm junto com os
           jogos
         </h2>

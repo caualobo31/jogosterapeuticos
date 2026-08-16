@@ -51,7 +51,7 @@ export default function Faq() {
   return (
     <Section bg="tint" id="faq">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-semibold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Perguntas <span className="text-brand">frequentes</span>
         </h2>
 

@@ -7,7 +7,7 @@ export default function PorDentro() {
   return (
     <Section bg="tint">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-semibold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+        <h2 className="font-heading text-[22px] font-extrabold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Veja <span className="text-brand">por dentro</span> do material
         </h2>
         <p className="mx-auto mt-4 max-w-[440px] font-body text-[15px] leading-relaxed text-muted">
