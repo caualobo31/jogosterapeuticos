@@ -32,6 +32,7 @@ export default function UpsellModal() {
   return (
     <>
       <CtaButton
+        href={CHECKOUT_URL_BASICO}
         variant="secondary"
         className="mt-6 w-full"
         onClick={() => setOpen(true)}
