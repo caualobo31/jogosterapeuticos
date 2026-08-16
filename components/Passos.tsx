@@ -35,9 +35,12 @@ export default function Passos() {
           Do PDF à sessão em <span className="text-brand">3 passos</span>
         </h2>
 
-        <div className="mx-auto mt-8 grid max-w-[520px] grid-cols-1 gap-8 text-left sm:grid-cols-3 sm:gap-6 sm:text-center">
+        <div className="mx-auto mt-8 grid max-w-[720px] grid-cols-1 items-stretch gap-8 sm:grid-cols-3 sm:gap-6">
           {passos.map(({ numero, lead, resto, foto, alt }) => (
-            <div key={numero} className="flex flex-col items-start sm:items-center">
+            <div
+              key={numero}
+              className="flex flex-col items-center text-center"
+            >
               <span className="font-heading text-[30px] font-bold leading-none text-brand-vivid">
                 {numero}
               </span>
@@ -45,12 +48,12 @@ export default function Passos() {
                 <strong className="font-semibold">{lead}</strong>
                 {resto}
               </p>
-              <div className="relative mt-4 h-20 w-20 shrink-0 overflow-hidden rounded-card border border-bordersoft shadow-sm shadow-brand/10">
+              <div className="relative mt-4 aspect-[4/3] w-full overflow-hidden rounded-card border border-bordersoft shadow-sm shadow-brand/10">
                 <Image
                   src={foto}
                   alt={alt}
                   fill
-                  sizes="80px"
+                  sizes="(min-width: 640px) 33vw, 90vw"
                   className="object-cover"
                 />
               </div>
