@@ -4,7 +4,8 @@ import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
 import OfferCountdownPill from "./OfferCountdownPill";
-import { CHECKOUT_URL_BASICO, CHECKOUT_URL_COMPLETO } from "@/lib/config";
+import UpsellModal from "./UpsellModal";
+import { CHECKOUT_URL_COMPLETO } from "@/lib/config";
 
 const basicoItens = [
   "Os 50 jogos, nas 5 dificuldades",
@@ -77,13 +78,7 @@ export default function Planos() {
               ))}
             </ul>
 
-            <CtaButton
-              href={CHECKOUT_URL_BASICO}
-              variant="secondary"
-              className="mt-6 w-full"
-            >
-              Quero os 50 jogos
-            </CtaButton>
+            <UpsellModal />
 
             <div className="mt-4 flex flex-col items-center gap-1.5 rounded-card bg-brand-tint2 px-3 py-3 text-center">
               <p className="font-body text-[12px] font-semibold leading-snug text-brand">

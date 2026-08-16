@@ -4,9 +4,10 @@ import { CHECKOUT_URL } from "@/lib/config";
 
 type CtaButtonProps = {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "text";
   className?: string;
   href?: string;
+  onClick?: () => void;
 };
 
 export default function CtaButton({
@@ -14,15 +15,23 @@ export default function CtaButton({
   variant = "primary",
   className = "",
   href = CHECKOUT_URL,
+  onClick,
 }: CtaButtonProps) {
-  const base =
-    "inline-block rounded-card px-8 py-3.5 text-center font-heading text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.99]";
   const styles =
     variant === "primary"
-      ? "bg-gradient-to-r from-brand-dark to-brand-vivid text-white shadow-lg shadow-brand/25"
-      : "bg-brand-lavender text-graphite";
+      ? "inline-block rounded-card px-8 py-3.5 text-center font-heading text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.99] bg-gradient-to-r from-brand-dark to-brand-vivid text-white shadow-lg shadow-brand/25"
+      : variant === "secondary"
+        ? "inline-block rounded-card px-8 py-3.5 text-center font-heading text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.99] bg-brand-lavender text-graphite"
+        : "inline-block font-body text-[13px] text-muted underline-offset-2 hover:underline";
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    // Se o botão tem uma ação própria (ex: abrir um modal), ela substitui a navegação.
+    if (onClick) {
+      e.preventDefault();
+      onClick();
+      return;
+    }
+
     // Âncoras internas (#planos etc.) navegam normalmente, sem redirecionamento forçado.
     if (href.startsWith("#")) return;
 
@@ -37,7 +46,7 @@ export default function CtaButton({
     <a
       href={href}
       onClick={handleClick}
-      className={`${base} ${styles} ${className}`}
+      className={`${styles} ${className}`}
     >
       {children}
     </a>
