@@ -3,6 +3,7 @@ import { Check, Star, ShieldCheck, Zap } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
+import OfferCountdownPill from "./OfferCountdownPill";
 import { CHECKOUT_URL_BASICO, CHECKOUT_URL_COMPLETO } from "@/lib/config";
 
 const basicoItens = [
@@ -28,6 +29,7 @@ export default function Planos() {
   return (
     <Section bg="cream" id="planos">
       <Reveal>
+        <OfferCountdownPill />
         <h2 className="font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Escolha como <span className="text-brand">começar</span>
         </h2>
