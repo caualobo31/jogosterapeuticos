@@ -43,34 +43,36 @@ export default function Bonus() {
           conduzir a sessão e a devolutiva, sem pagar nada a mais por isso.
         </p>
 
-        <div className="mx-auto mt-8 grid max-w-[600px] grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="mx-auto mt-8 grid max-w-[600px] grid-cols-1 gap-3 sm:grid-cols-2">
           {bonus.map(({ capa, nome, copy, preco }) => (
             <div
               key={nome}
-              className="rounded-card border border-bordersoft bg-cream p-5 text-left"
+              className="flex items-center gap-3.5 rounded-card border border-bordersoft bg-cream p-3.5 text-left"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg shadow-md shadow-brand/10">
+              <div className="relative aspect-[4/5] w-16 shrink-0 overflow-hidden rounded-lg shadow-sm shadow-brand/10 sm:w-20">
                 <Image
                   src={capa}
                   alt={`Capa do bônus: ${nome}`}
                   fill
-                  sizes="(min-width: 640px) 280px, 45vw"
+                  sizes="80px"
                   className="object-cover"
                 />
               </div>
-              <p className="mt-4 font-heading text-[15px] font-semibold text-graphite">
-                {nome}
-              </p>
-              <p className="mt-2 font-body text-[13.5px] leading-relaxed text-muted">
-                {copy}
-              </p>
-              <div className="mt-4 flex items-center gap-2 border-t border-bordersoft pt-4">
-                <span className="font-body text-[13px] text-red-600 line-through">
-                  {preco}
-                </span>
-                <span className="rounded-full bg-gradient-to-r from-green-600 to-green-700 px-2.5 py-1 font-heading text-[11px] font-bold uppercase tracking-wide text-white">
-                  Grátis
-                </span>
+              <div className="min-w-0 flex-1">
+                <p className="font-heading text-[13.5px] font-semibold leading-snug text-graphite sm:text-[14.5px]">
+                  {nome}
+                </p>
+                <p className="mt-1 font-body text-[12px] leading-snug text-muted">
+                  {copy}
+                </p>
+                <div className="mt-2 flex items-center gap-2 border-t border-bordersoft pt-2">
+                  <span className="font-body text-[12.5px] text-red-600 line-through">
+                    {preco}
+                  </span>
+                  <span className="rounded-full bg-gradient-to-r from-green-600 to-green-700 px-2 py-0.5 font-heading text-[10px] font-bold uppercase tracking-wide text-white">
+                    Grátis
+                  </span>
+                </div>
               </div>
             </div>
           ))}
