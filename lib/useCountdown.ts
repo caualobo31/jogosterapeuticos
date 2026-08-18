@@ -1,19 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { COUNTDOWN_DURATION_MS } from "./config";
 
-const STORAGE_KEY = "oferta-expira-em";
-
-function getExpiration(): number {
-  const stored = window.localStorage.getItem(STORAGE_KEY);
-  if (stored) {
-    const parsed = Number(stored);
-    if (!Number.isNaN(parsed)) return parsed;
-  }
-  const proximaExpiracao = Date.now() + COUNTDOWN_DURATION_MS;
-  window.localStorage.setItem(STORAGE_KEY, String(proximaExpiracao));
-  return proximaExpiracao;
+function getMsAteMeiaNoite(): number {
+  const agora = new Date();
+  const meiaNoite = new Date(
+    agora.getFullYear(),
+    agora.getMonth(),
+    agora.getDate() + 1,
+    0,
+    0,
+    0,
+    0,
+  );
+  return meiaNoite.getTime() - agora.getTime();
 }
 
 function formatar(msRestante: number) {
@@ -26,18 +26,17 @@ function formatar(msRestante: number) {
 }
 
 /**
- * Contador compartilhado: todo componente que chamar esse hook lê o mesmo
- * timestamp de expiração salvo no localStorage, então ficam sincronizados
- * entre si e sobrevivem a reload, sem reiniciar pro mesmo visitante.
+ * Contador compartilhado: conta sempre até a próxima meia-noite (horário
+ * local do visitante) e reinicia sozinho todo dia, sem depender de
+ * localStorage. Qualquer visitante vê o mesmo tempo restante no mesmo
+ * instante, e o valor se mantém coerente entre reloads dentro do mesmo dia.
  */
 export function useCountdown() {
   const [tempo, setTempo] = useState("00:00:00");
 
   useEffect(() => {
-    const expiracao = getExpiration();
-
     function tick() {
-      setTempo(formatar(expiracao - Date.now()));
+      setTempo(formatar(getMsAteMeiaNoite()));
     }
 
     tick();

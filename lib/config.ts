@@ -6,6 +6,3 @@ export const CHECKOUT_URL_COMPLETO_PROMO = "https://pay.wiapy.com/Cg4ph7DjBf8";
 
 // Fallback para qualquer CTA que não especifique um plano.
 export const CHECKOUT_URL = CHECKOUT_URL_COMPLETO;
-
-// Duração do contador da oferta. Altere aqui pra mudar o prazo (em horas).
-export const COUNTDOWN_DURATION_MS = 24 * 60 * 60 * 1000;
