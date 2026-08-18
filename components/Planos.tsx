@@ -11,12 +11,14 @@ const basicoItens = [
   "Os 50 jogos, nas 5 dificuldades",
   "Regras de cada jogo",
   "Acesso vitalício",
+  "Garantia de 15 dias",
 ];
 
 const completoBase = [
   "Os 50 jogos, nas 5 dificuldades",
   "Regras de cada jogo",
   "Acesso vitalício",
+  "Garantia de 15 dias",
 ];
 
 const completoBonus = [
