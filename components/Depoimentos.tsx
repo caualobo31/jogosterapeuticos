@@ -2,43 +2,32 @@
 
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import ScrollCue from "./ScrollCue";
+import Placeholder from "./Placeholder";
 
 const depoimentos = [
   {
-    quote:
-      "Eu terminava a sessão insegura, sem saber se tinha ajudado. Agora chego com o jogo certo pra dificuldade da criança e a sessão flui sozinha. Foi o que faltava depois da pós.",
-    nome: "Mariana R.",
-    papel: "Psicopedagoga clínica",
-    cidade: "Belo Horizonte",
-    foto: "/images/mulher1.webp",
+    id: 1,
+    foto: null as string | null,
+    alt: "Print de depoimento de psicopedagoga sobre o material",
   },
   {
-    quote:
-      "A criança que não parava quieta com ficha ficou o atendimento inteiro envolvida no jogo da trilha. Os pais notaram a diferença na devolutiva. Material que se paga no primeiro uso.",
-    nome: "Camila S.",
-    papel: "Psicopedagoga",
-    cidade: "Curitiba",
-    foto: "/images/mulher2.webp",
+    id: 2,
+    foto: null as string | null,
+    alt: "Print de depoimento de psicopedagoga sobre o material",
   },
   {
-    quote:
-      "Eu perdia domingo inteiro montando material. Agora é abrir, imprimir e aplicar. Recuperei meu tempo e ainda melhorei a qualidade da sessão.",
-    nome: "Juliana A.",
-    papel: "Psicopedagoga clínica",
-    cidade: "Recife",
-    foto: "/images/mulher3.webp",
+    id: 3,
+    foto: null as string | null,
+    alt: "Print de depoimento de psicopedagoga sobre o material",
   },
   {
-    quote:
-      "O guia com o que observar em cada jogo mudou meu jeito de trabalhar. Deixei de só aplicar atividade e passei a enxergar o que a criança revela. Chego na devolutiva sabendo o que falar.",
-    nome: "Patrícia M.",
-    papel: "Psicopedagoga",
-    cidade: "Campinas",
-    foto: null,
+    id: 4,
+    foto: null as string | null,
+    alt: "Print de depoimento de psicopedagoga sobre o material",
   },
 ];
 
@@ -93,45 +82,25 @@ export default function Depoimentos() {
           >
             {depoimentos.map((d) => (
               <div
-                key={d.nome}
-                className="flex w-[82%] shrink-0 snap-center flex-col rounded-card border border-bordersoft bg-warmwhite p-6 text-left sm:w-[46%] lg:w-[31%]"
+                key={d.id}
+                className="w-[82%] shrink-0 snap-center sm:w-[46%] lg:w-[31%]"
               >
-                <div className="flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-brand text-brand"
+                {d.foto ? (
+                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card border border-bordersoft shadow-sm shadow-brand/10">
+                    <Image
+                      src={d.foto}
+                      alt={d.alt}
+                      fill
+                      sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 82vw"
+                      className="object-cover"
                     />
-                  ))}
-                </div>
-                <p className="mt-4 font-editorial text-[15px] italic leading-relaxed text-graphite">
-                  &ldquo;{d.quote}&rdquo;
-                </p>
-                <div className="mt-5 flex items-center gap-3">
-                  {d.foto ? (
-                    <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full">
-                      <Image
-                        src={d.foto}
-                        alt={d.nome}
-                        fill
-                        sizes="40px"
-                        className="object-cover"
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-tint2 font-heading text-[13px] font-semibold text-brand">
-                      {d.nome.charAt(0)}
-                    </div>
-                  )}
-                  <div>
-                    <p className="font-heading text-[13px] font-semibold text-graphite">
-                      {d.nome}
-                    </p>
-                    <p className="font-body text-[12px] text-muted">
-                      {d.papel} · {d.cidade}
-                    </p>
                   </div>
-                </div>
+                ) : (
+                  <Placeholder
+                    label={`[ print do depoimento ${d.id} ]`}
+                    className="aspect-[4/5] w-full"
+                  />
+                )}
               </div>
             ))}
           </div>
@@ -159,10 +128,10 @@ export default function Depoimentos() {
         <div className="mt-5 flex items-center justify-center gap-2">
           {depoimentos.map((d, i) => (
             <button
-              key={d.nome}
+              key={d.id}
               type="button"
               onClick={() => scrollToIndex(i)}
-              aria-label={`Ir para o depoimento de ${d.nome}`}
+              aria-label={`Ir para o depoimento ${d.id}`}
               className={`h-2 rounded-full transition-all ${
                 active === i ? "w-6 bg-brand" : "w-2 bg-brand-lavender"
               }`}
