@@ -6,28 +6,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import ScrollCue from "./ScrollCue";
-import Placeholder from "./Placeholder";
 
 const depoimentos = [
   {
     id: 1,
-    foto: null as string | null,
-    alt: "Print de depoimento de psicopedagoga sobre o material",
+    foto: "/images/depoimentos/depoimento-1.webp",
+    alt: "Print de conversa de WhatsApp: cliente conta que aplicou uma das dinâmicas de articulação e funcionou super bem, a criança se engajou e repetiu várias vezes sem reclamar",
   },
   {
     id: 2,
-    foto: null as string | null,
-    alt: "Print de depoimento de psicopedagoga sobre o material",
+    foto: "/images/depoimentos/depoimento-2.webp",
+    alt: "Print de conversa de WhatsApp: cliente confirma que acessou o material, amou e já separou o que vai usar de tarde, achou bem criativo",
   },
   {
     id: 3,
-    foto: null as string | null,
-    alt: "Print de depoimento de psicopedagoga sobre o material",
-  },
-  {
-    id: 4,
-    foto: null as string | null,
-    alt: "Print de depoimento de psicopedagoga sobre o material",
+    foto: "/images/depoimentos/depoimento-3.webp",
+    alt: "Print de conversa de WhatsApp: cliente diz que gostou muito, achou o material super completo, parabeniza e já quer comprar o material de outras idades",
   },
 ];
 
@@ -85,22 +79,15 @@ export default function Depoimentos() {
                 key={d.id}
                 className="w-[82%] shrink-0 snap-center sm:w-[46%] lg:w-[31%]"
               >
-                {d.foto ? (
-                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-card border border-bordersoft shadow-sm shadow-brand/10">
-                    <Image
-                      src={d.foto}
-                      alt={d.alt}
-                      fill
-                      sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 82vw"
-                      className="object-cover"
-                    />
-                  </div>
-                ) : (
-                  <Placeholder
-                    label={`[ print do depoimento ${d.id} ]`}
-                    className="aspect-[4/5] w-full"
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card border border-bordersoft shadow-sm shadow-brand/10">
+                  <Image
+                    src={d.foto}
+                    alt={d.alt}
+                    fill
+                    sizes="(min-width: 1024px) 31vw, (min-width: 640px) 46vw, 82vw"
+                    className="object-cover"
                   />
-                )}
+                </div>
               </div>
             ))}
           </div>
