@@ -40,7 +40,7 @@ export default function Planos() {
             </span>
 
             <p className="mt-2 font-heading text-[16px] font-semibold text-graphite">
-              +50 JOGOS TERAPÊUTICOS
+              +50 JOGOS TERAPÊUTICOS + BÔNUS
             </p>
             <p className="mt-1 font-body text-[12.5px] text-muted">
               o sistema pra conduzir a sessão e a devolutiva com segurança
