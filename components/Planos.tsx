@@ -36,7 +36,7 @@ export default function Planos() {
           {/* Completo */}
           <div className="relative rounded-card border-2 border-brand bg-warmwhite p-7 shadow-xl shadow-brand/15 sm:p-8">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-to-r from-brand-dark to-brand-vivid px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-wide text-white">
-              Melhor custo
+              Melhor custo-benefício
             </span>
 
             <p className="mt-2 font-heading text-[16px] font-semibold text-graphite">
