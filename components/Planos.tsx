@@ -1,10 +1,18 @@
 import Image from "next/image";
-import { Check, Star, ShieldCheck, Zap } from "lucide-react";
+import { Check, Star, ShieldCheck, Zap, ArrowDown } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
 import OfferCountdownPill from "./OfferCountdownPill";
-import { CHECKOUT_URL_COMPLETO_PROMO } from "@/lib/config";
+import UpsellModal from "./UpsellModal";
+import { CHECKOUT_URL_COMPLETO } from "@/lib/config";
+
+const basicoItens = [
+  "Os 50 jogos, nas 5 dificuldades",
+  "Regras de cada jogo",
+  "Acesso vitalício",
+  "Garantia de 15 dias",
+];
 
 const completoBase = [
   "Os 50 jogos, nas 5 dificuldades",
@@ -32,11 +40,60 @@ export default function Planos() {
           Acesso imediato. Você imprime hoje e usa na próxima sessão.
         </p>
 
-        <div className="mx-auto mt-8 max-w-[380px]">
+        <div className="mx-auto mt-8 grid max-w-[600px] grid-cols-1 items-start gap-5 sm:grid-cols-2">
+          {/* Básico */}
+          <div className="rounded-card border border-bordersoft bg-warmwhite p-6 opacity-90">
+            <p className="font-heading text-[15px] font-semibold text-graphite">
+              Básico
+            </p>
+            <p className="mt-1 font-body text-[12.5px] text-muted">
+              só o material, pra sair do improviso
+            </p>
+
+            <div className="relative mx-auto mt-4 aspect-[4/3] w-[55%]">
+              <Image
+                src="/images/mockup-simples-jg.webp"
+                alt="Caixa do Kit +50 Jogos Terapêuticos"
+                fill
+                sizes="160px"
+                className="object-contain"
+              />
+            </div>
+
+            <p className="mt-4 font-heading text-[34px] font-bold text-brand">
+              R$ 19,90
+            </p>
+            <p className="mt-0.5 font-body text-[12.5px] text-muted">
+              à vista no Pix
+            </p>
+
+            <hr className="my-4 border-bordersoft" />
+
+            <ul className="flex flex-col gap-2.5 text-left">
+              {basicoItens.map((item) => (
+                <li key={item} className="flex items-start gap-1.5">
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                  <span className="font-body text-[13.5px] leading-relaxed text-graphite">
+                    {item}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <UpsellModal />
+
+            <div className="mt-4 flex flex-col items-center gap-1.5 rounded-card bg-brand-tint2 px-3 py-3 text-center">
+              <p className="font-body text-[12px] font-semibold leading-snug text-brand">
+                92% das psicopedagogas escolhem o Completo
+              </p>
+              <ArrowDown className="h-4 w-4 text-brand" aria-hidden="true" />
+            </div>
+          </div>
+
           {/* Completo */}
           <div className="relative rounded-card border-2 border-brand bg-warmwhite p-7 shadow-xl shadow-brand/15 sm:p-8">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-to-r from-brand-dark to-brand-vivid px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-wide text-white">
-              Melhor custo-benefício
+              Mais escolhido · Melhor custo-benefício
             </span>
 
             <p className="mt-2 font-heading text-[16px] font-semibold text-graphite">
@@ -60,13 +117,13 @@ export default function Planos() {
               de R$ 207,00
             </p>
             <p className="mt-0.5 font-heading text-[38px] font-bold text-brand">
-              R$ 29,90
+              R$ 37,90
             </p>
             <p className="mt-1 font-body text-[13px] font-semibold text-green-700">
-              Você economiza R$ 177,10
+              Você economiza R$ 169,10
             </p>
             <p className="mt-1 font-body text-[12.5px] text-muted">
-              à vista no Pix
+              à vista no Pix ou 12x de R$ 3,90
             </p>
 
             <hr className="my-4 border-bordersoft" />
@@ -90,10 +147,7 @@ export default function Planos() {
               ))}
             </ul>
 
-            <CtaButton
-              href={CHECKOUT_URL_COMPLETO_PROMO}
-              className="mt-6 w-full"
-            >
+            <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-6 w-full">
               Quero o kit completo
             </CtaButton>
 
