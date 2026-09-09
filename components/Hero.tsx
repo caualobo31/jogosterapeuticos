@@ -36,11 +36,6 @@ export default function Hero() {
             , o berço da profissão, adaptados ao consultório brasileiro.
           </p>
 
-          <p className="mx-auto mt-4 max-w-[420px] font-body text-[15px] leading-relaxed text-muted">
-            Dislexia, discalculia, TDAH, disgrafia e disortografia. Imprima,
-            recorte e aplique, sem improviso.
-          </p>
-
           <Image
             src="/images/hero-mockup.webp"
             alt="Kit +50 Jogos Terapêuticos: caixa premium, cartas, cadernos de atividades, fichas e peças do material impresso"
