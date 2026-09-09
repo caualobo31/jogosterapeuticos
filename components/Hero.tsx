@@ -18,11 +18,23 @@ export default function Hero() {
       <CountdownBar />
       <Section bg="cream" className="pt-6">
         <Reveal>
+          <span className="mb-3 inline-block rounded-full bg-brand-tint2 px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-[0.5px] text-brand">
+            Método Ludo-Argentino
+          </span>
+
           <h1 className="font-heading text-[26px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[32px]">
             <span className="text-brand">+50 jogos terapêuticos</span>{" "}
             prontos para cada{" "}
             <span className="text-brand">dificuldade de aprendizagem</span>
           </h1>
+
+          <p className="mx-auto mt-4 max-w-[440px] font-heading text-[16px] font-semibold leading-snug text-muted sm:text-[17px]">
+            Fundamentados na{" "}
+            <strong className="font-bold text-brand">
+              escola argentina de psicopedagogia
+            </strong>
+            , o berço da profissão, adaptados ao consultório brasileiro.
+          </p>
 
           <p className="mx-auto mt-4 max-w-[420px] font-body text-[15px] leading-relaxed text-muted">
             Dislexia, discalculia, TDAH, disgrafia e disortografia. Imprima,

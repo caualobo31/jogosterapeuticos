@@ -39,6 +39,19 @@ export default function Mecanismo() {
           O jogo é o instrumento da intervenção: é jogando que a criança se
           solta e mostra onde trava.
         </p>
+        <p className="mx-auto mt-3 max-w-[460px] font-body text-[14px] leading-relaxed text-muted">
+          Cada jogo do Método Ludo-Argentino é construído sobre a abordagem
+          que fundou a psicopedagogia clínica: a{" "}
+          <strong className="font-semibold text-brand">
+            escola argentina
+          </strong>{" "}
+          de Fernández, Paín e Visca, somada à{" "}
+          <strong className="font-semibold text-brand">
+            base piagetiana
+          </strong>
+          . Tudo adaptado à língua portuguesa e à realidade do seu
+          consultório.
+        </p>
 
         <div className="mx-auto mt-8 grid max-w-[560px] grid-cols-2 gap-3 sm:grid-cols-3">
           {categorias.map(({ titulo, desc }) => (

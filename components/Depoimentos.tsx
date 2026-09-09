@@ -127,8 +127,9 @@ export default function Depoimentos() {
         </div>
 
         <p className="mx-auto mt-6 max-w-[440px] font-body text-[12.5px] leading-relaxed text-muted">
-          Jogos na linha de Fernández, Bossa, PIAFEX e Simaia Sampaio. Nada
-          aqui substitui a sua avaliação.
+          Método Ludo-Argentino: fundamentado na escola argentina de
+          psicopedagogia e na base piagetiana, na linha de Fernández, Paín,
+          Visca e Bossa. Nada aqui substitui a sua avaliação
         </p>
 
         <ScrollCue to="bonus" label="Ver a próxima seção" />
