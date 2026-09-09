@@ -35,11 +35,7 @@ export default function Mecanismo() {
         <h2 className="mt-2 font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           São <span className="text-brand">jogos de verdade</span>, por dificuldade
         </h2>
-        <p className="mx-auto mt-4 max-w-[460px] font-body text-[15px] leading-relaxed text-muted">
-          O jogo é o instrumento da intervenção: é jogando que a criança se
-          solta e mostra onde trava.
-        </p>
-        <p className="mx-auto mt-3 max-w-[460px] font-body text-[14px] leading-relaxed text-muted">
+        <p className="mx-auto mt-4 max-w-[460px] font-body text-[14px] leading-relaxed text-muted">
           Cada jogo do Método Ludo-Argentino é construído sobre a abordagem
           que fundou a psicopedagogia clínica: a{" "}
           <strong className="font-semibold text-brand">
