@@ -71,10 +71,11 @@ export default function UpsellModal() {
               </h3>
 
               <p className="mt-3 font-body text-[13.5px] leading-relaxed text-muted">
-                Você ia levar só os 50 jogos. Por só R$ 10 a mais, leve
-                também o guia do que observar em cada jogo, as fichas de
-                registro, o roteiro de devolutiva e os planejamentos de
-                sessão. Tudo o que te dá segurança pra conduzir.
+                Você ia levar só os 50 jogos. Por só R$ 18 a mais, leve
+                também mais 30 jogos extras, o guia do que observar em cada
+                jogo, as fichas de registro, o roteiro de devolutiva e os
+                planejamentos de sessão. Tudo o que te dá segurança pra
+                conduzir.
               </p>
 
               <div className="relative mx-auto mt-4 aspect-[4/3] w-[65%]">
@@ -88,10 +89,10 @@ export default function UpsellModal() {
               </div>
 
               <p className="mt-4 font-body text-[13px] text-red-600 line-through">
-                de R$ 37,90
+                de R$ 47,90
               </p>
               <p className="mt-0.5 font-heading text-[32px] font-bold text-brand">
-                por R$ 29,90
+                por R$ 37,90
               </p>
               <p className="mt-0.5 font-body text-[12px] text-muted">
                 só nesta oferta
@@ -101,7 +102,7 @@ export default function UpsellModal() {
                 href={CHECKOUT_URL_COMPLETO_PROMO}
                 className="mt-5 w-full"
               >
-                Sim, quero o Completo por R$ 29,90
+                Sim, quero o Completo por R$ 37,90
               </CtaButton>
 
               <CtaButton

@@ -114,21 +114,27 @@ export default function Planos() {
             </div>
 
             <p className="mt-4 font-body text-[12.5px] text-red-600 line-through">
-              de R$ 207,00
+              de R$ 247,00
             </p>
             <p className="mt-0.5 font-heading text-[38px] font-bold text-brand">
-              R$ 37,90
+              R$ 47,90
             </p>
             <p className="mt-1 font-body text-[13px] font-semibold text-green-700">
-              Você economiza R$ 169,10
+              Você economiza R$ 199,10
             </p>
             <p className="mt-1 font-body text-[12.5px] text-muted">
-              à vista no Pix ou 12x de R$ 3,90
+              à vista no Pix ou 12x de R$ 4,90
             </p>
 
             <hr className="my-4 border-bordersoft" />
 
             <ul className="flex flex-col gap-2.5 text-left">
+              <li className="flex items-start gap-1.5">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <span className="font-body text-[13.5px] font-semibold leading-relaxed text-brand">
+                  + 30 jogos terapêuticos extras
+                </span>
+              </li>
               {completoBase.map((item) => (
                 <li key={item} className="flex items-start gap-1.5">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
