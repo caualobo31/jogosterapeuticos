@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Section from "./Section";
 import Reveal from "./Reveal";
-import CtaButton from "./CtaButton";
 
 const bonus = [
   {
@@ -76,19 +75,6 @@ export default function Bonus() {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mx-auto mt-10 max-w-[420px]">
-          <p className="font-body text-[14px] text-muted">
-            Valor total dos bônus:{" "}
-            <span className="text-red-600 line-through">R$ 140</span>
-          </p>
-          <p className="mt-2 font-heading text-[16px] font-semibold leading-snug text-brand">
-            Tudo isso vem junto. Sem custo extra.
-          </p>
-          <CtaButton href="#planos" className="mt-6">
-            Quero o kit completo
-          </CtaButton>
         </div>
       </Reveal>
     </Section>
