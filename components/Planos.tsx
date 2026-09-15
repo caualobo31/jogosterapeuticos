@@ -1,179 +1,148 @@
 import Image from "next/image";
-import { Check, Star, ShieldCheck, Zap, ArrowDown } from "lucide-react";
+import { Check, ArrowDown } from "lucide-react";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
 import OfferCountdownPill from "./OfferCountdownPill";
-import UpsellModal from "./UpsellModal";
 import { CHECKOUT_URL_COMPLETO } from "@/lib/config";
 
-const basicoItens = [
-  "Os 50 jogos, nas 5 dificuldades",
-  "Regras de cada jogo",
-  "Acesso vitalício",
-  "Garantia de 15 dias",
+const itensValor = [
+  { nome: "+50 Jogos Terapêuticos", valor: "R$ 79,90" },
+  { nome: "Guia de Aplicação Clínica", valor: "R$ 47,00" },
+  { nome: "Fichas de Registro e Evolução", valor: "R$ 27,00" },
+  { nome: "Roteiro de Devolutiva", valor: "R$ 37,00" },
+  { nome: "Planejamentos de Sessão Prontos", valor: "R$ 29,00" },
 ];
 
-const completoBase = [
-  "Os 50 jogos, nas 5 dificuldades",
-  "Regras de cada jogo",
-  "Acesso vitalício",
+const itensKit = [
+  "+50 Jogos Terapêuticos",
+  "Dislexia, Discalculia, TDAH, Disgrafia e Disortografia",
+  "Guia de Aplicação Clínica",
+  "Fichas de Registro e Evolução",
+  "Roteiro de Devolutiva",
+  "Planejamentos de Sessão Prontos",
+  "Impressão ilimitada",
   "Garantia de 15 dias",
-];
-
-const completoBonus = [
-  "Guia com o que observar em cada jogo",
-  "Fichas de registro e evolução",
-  "Roteiro de devolutiva pra pais e escola",
-  "Planejamentos de sessão prontos",
 ];
 
 export default function Planos() {
   return (
     <Section bg="cream" id="planos">
       <Reveal>
-        <OfferCountdownPill />
-        <h2 className="font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
-          Escolha como <span className="text-brand">começar</span>
+        <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
+          Veja quanto tudo isso custaria separado
+        </p>
+        <h2 className="mx-auto mt-2 max-w-[480px] font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+          Um acervo inteiro de jogos por menos do que você pagaria em poucos
+          materiais físicos
         </h2>
-        <p className="mx-auto mt-3 max-w-[380px] font-body text-[13.5px] leading-relaxed text-muted">
-          Acesso imediato. Você imprime hoje e usa na próxima sessão.
+        <p className="mx-auto mt-3 max-w-[420px] font-body text-[13.5px] leading-relaxed text-muted">
+          Em vez de comprar jogos e recursos separadamente, você leva tudo em
+          um único acesso para imprimir e usar sempre que precisar.
         </p>
 
-        <div className="mx-auto mt-8 grid max-w-[600px] grid-cols-1 items-start gap-5 sm:grid-cols-2">
-          {/* Básico */}
-          <div className="rounded-card border border-bordersoft bg-warmwhite p-6 opacity-90">
-            <p className="font-heading text-[15px] font-semibold text-graphite">
-              Básico
-            </p>
-            <p className="mt-1 font-body text-[12.5px] text-muted">
-              só o material, pra sair do improviso
-            </p>
-
-            <div className="relative mx-auto mt-4 aspect-[4/3] w-[55%]">
-              <Image
-                src="/images/mockup-simples-jg.webp"
-                alt="Caixa do Kit +50 Jogos Terapêuticos"
-                fill
-                sizes="160px"
-                className="object-contain"
-              />
-            </div>
-
-            <p className="mt-4 font-heading text-[34px] font-bold text-brand">
-              R$ 19,90
-            </p>
-            <p className="mt-0.5 font-body text-[12.5px] text-muted">
-              à vista no Pix
-            </p>
-
-            <hr className="my-4 border-bordersoft" />
-
-            <ul className="flex flex-col gap-2.5 text-left">
-              {basicoItens.map((item) => (
-                <li key={item} className="flex items-start gap-1.5">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
-                  <span className="font-body text-[13.5px] leading-relaxed text-graphite">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <UpsellModal />
-
-            <div className="mt-4 flex flex-col items-center gap-1.5 rounded-card bg-brand-tint2 px-3 py-3 text-center">
-              <p className="font-body text-[12px] font-semibold leading-snug text-brand">
-                92% das psicopedagogas escolhem o Completo
-              </p>
-              <ArrowDown className="h-4 w-4 text-brand" aria-hidden="true" />
-            </div>
-          </div>
-
-          {/* Completo */}
-          <div className="relative rounded-card border-2 border-brand bg-warmwhite p-7 shadow-xl shadow-brand/15 sm:p-8">
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gradient-to-r from-brand-dark to-brand-vivid px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-wide text-white">
-              Mais escolhido · Melhor custo-benefício
+        <div className="mx-auto mt-7 max-w-[440px] overflow-hidden rounded-card border border-bordersoft bg-warmwhite text-left">
+          <div className="flex items-center justify-between gap-3 bg-gradient-to-r from-brand-dark to-brand-vivid px-4 py-2.5">
+            <span className="font-heading text-[11px] font-semibold uppercase tracking-wide text-white">
+              O que você recebe
             </span>
-
-            <p className="mt-2 font-heading text-[16px] font-semibold text-graphite">
-              +50 JOGOS TERAPÊUTICOS + BÔNUS
-            </p>
-            <p className="mt-1 font-body text-[12.5px] text-muted">
-              o sistema pra conduzir a sessão e a devolutiva com segurança
-            </p>
-
-            <div className="relative mt-4 aspect-[4/3] w-full">
-              <Image
-                src="/images/hero-mockup.webp"
-                alt="Kit +50 Jogos Terapêuticos: caixa premium, cartas, cadernos de atividades e fichas do material impresso"
-                fill
-                sizes="(min-width: 640px) 320px, 90vw"
-                className="object-contain"
-              />
-            </div>
-
-            <p className="mt-4 font-body text-[12.5px] text-red-600 line-through">
-              de R$ 247,00
-            </p>
-            <p className="mt-0.5 font-heading text-[38px] font-bold text-brand">
-              R$ 47,90
-            </p>
-            <p className="mt-1 font-body text-[13px] font-semibold text-green-700">
-              Você economiza R$ 199,10
-            </p>
-            <p className="mt-1 font-body text-[12.5px] text-muted">
-              à vista no Pix ou 12x de R$ 4,90
-            </p>
-
-            <hr className="my-4 border-bordersoft" />
-
-            <ul className="flex flex-col gap-2.5 text-left">
-              <li className="flex items-start gap-1.5">
-                <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
-                <span className="font-body text-[13.5px] font-semibold leading-relaxed text-brand">
-                  + 30 jogos terapêuticos extras
-                </span>
-              </li>
-              {completoBase.map((item) => (
-                <li key={item} className="flex items-start gap-1.5">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
-                  <span className="font-body text-[13.5px] leading-relaxed text-graphite">
-                    {item}
-                  </span>
-                </li>
-              ))}
-              {completoBonus.map((item) => (
-                <li key={item} className="flex items-start gap-1.5">
-                  <Star className="mt-0.5 h-4 w-4 shrink-0 text-pink" />
-                  <span className="font-body text-[13.5px] leading-relaxed text-graphite">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-
-            <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-6 w-full">
-              Quero o kit completo
-            </CtaButton>
-
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5">
-              <div className="flex items-center gap-1.5 font-body text-[12px] text-muted">
-                <ShieldCheck className="h-[14px] w-[14px] shrink-0 text-brand" />
-                <span>Garantia de 15 dias</span>
-              </div>
-              <div className="flex items-center gap-1.5 font-body text-[12px] text-muted">
-                <Zap className="h-[14px] w-[14px] shrink-0 text-brand" />
-                <span>Acesso imediato</span>
-              </div>
-            </div>
+            <span className="font-heading text-[11px] font-semibold uppercase tracking-wide text-white">
+              Valor separado
+            </span>
           </div>
+          {itensValor.map(({ nome, valor }, i) => (
+            <div
+              key={nome}
+              className={`flex items-center justify-between gap-3 px-4 py-3 ${
+                i % 2 === 1 ? "bg-cream" : "bg-warmwhite"
+              } ${i !== itensValor.length - 1 ? "border-b border-bordersoft" : ""}`}
+            >
+              <span className="font-body text-[13px] text-graphite">
+                {nome}
+              </span>
+              <span className="shrink-0 font-body text-[13px] font-semibold text-red-600 line-through">
+                {valor}
+              </span>
+            </div>
+          ))}
         </div>
 
-        <p className="mx-auto mt-6 max-w-[420px] font-body text-[13.5px] text-muted">
-          Um único jogo terapêutico de loja custa mais que o kit inteiro.
-          Aqui são 50, pra imprimir sempre que precisar.
-        </p>
+        <div className="mx-auto mt-6 max-w-[380px] rounded-card border border-bordersoft bg-warmwhite px-6 py-5">
+          <p className="font-body text-[13px] font-medium text-muted">
+            Você pagaria:
+          </p>
+          <p className="mt-1 font-heading text-[30px] font-bold text-red-600 line-through">
+            R$ 219,90
+          </p>
+        </div>
+
+        <div className="mx-auto mt-6 max-w-[380px]">
+          <p className="font-body text-[14px] font-semibold text-graphite">
+            Mas você não vai pagar R$ 219,90.
+          </p>
+          <p className="mt-1.5 font-body text-[13.5px] leading-relaxed text-muted">
+            Hoje, nesta página, você pode garantir o Kit Completo inteiro por
+            uma condição especial.
+          </p>
+          <ArrowDown
+            className="mx-auto mt-3 h-5 w-5 text-brand"
+            aria-hidden="true"
+          />
+        </div>
+
+        <div className="mt-6">
+          <OfferCountdownPill />
+        </div>
+
+        <div className="relative mx-auto max-w-[380px] rounded-card border-2 border-brand bg-warmwhite p-7 text-center shadow-xl shadow-brand/15">
+          <p className="font-heading text-[16px] font-bold uppercase tracking-wide text-graphite">
+            Kit de Jogos Terapêuticos Completo
+          </p>
+
+          <div className="relative mx-auto mt-4 aspect-[4/3] w-[70%]">
+            <Image
+              src="/images/hero-mockup.webp"
+              alt="Kit +50 Jogos Terapêuticos: caixa premium, cartas, cadernos de atividades e fichas do material impresso"
+              fill
+              sizes="280px"
+              className="object-contain"
+            />
+          </div>
+
+          <p className="mt-5 font-body text-[14px] text-red-600 line-through">
+            R$ 219,90
+          </p>
+          <p className="mt-1 font-heading text-[13px] font-bold uppercase tracking-wide text-muted">
+            Hoje por
+          </p>
+          <p className="mt-0.5 font-heading text-[40px] font-bold text-brand">
+            R$ 27,90
+          </p>
+          <p className="mt-1.5 font-body text-[12.5px] text-muted">
+            pagamento único · acesso imediato · acesso vitalício
+          </p>
+
+          <hr className="my-5 border-bordersoft" />
+
+          <ul className="flex flex-col gap-2.5 text-left">
+            {itensKit.map((item) => (
+              <li key={item} className="flex items-start gap-1.5">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <span className="font-body text-[13.5px] leading-relaxed text-graphite">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+          <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-6 w-full">
+            Quero o kit completo por R$ 27,90
+          </CtaButton>
+
+          <p className="mt-3 font-body text-[12px] text-muted">
+            Pix · Cartão · Compra segura · Acesso imediato
+          </p>
+        </div>
       </Reveal>
     </Section>
   );

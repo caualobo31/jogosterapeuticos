@@ -33,20 +33,19 @@ export default function Mecanismo() {
           Não são fichas
         </p>
         <h2 className="mt-2 font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
-          São <span className="text-brand">jogos de verdade</span>, por dificuldade
+          São <span className="text-brand">jogos de verdade</span>, organizados por dificuldade
         </h2>
-        <p className="mx-auto mt-4 max-w-[460px] font-body text-[14px] leading-relaxed text-muted">
-          Cada jogo do Método Ludo-Argentino é construído sobre a abordagem
-          que fundou a psicopedagogia clínica: a{" "}
+        <p className="mx-auto mt-4 max-w-[440px] font-body text-[14px] leading-relaxed text-muted">
+          Jogos adaptados a partir de referências da{" "}
           <strong className="font-semibold text-brand">
-            escola argentina
+            tradição argentina de psicopedagogia
           </strong>{" "}
-          de Fernández, Paín e Visca, somada à{" "}
-          <strong className="font-semibold text-brand">
-            base piagetiana
-          </strong>
-          . Tudo adaptado à língua portuguesa e à realidade do seu
-          consultório.
+          e organizados para a prática no consultório brasileiro.
+        </p>
+        <p className="mx-auto mt-2 max-w-[440px] font-body text-[14px] leading-relaxed text-muted">
+          Cada material trabalha habilidades específicas e fica separado por
+          dificuldade para você encontrar rapidamente o que precisa usar na
+          sessão.
         </p>
 
         <div className="mx-auto mt-8 grid max-w-[560px] grid-cols-2 gap-3 sm:grid-cols-3">
