@@ -122,6 +122,14 @@ export default function Planos() {
             pagamento único · acesso imediato · acesso vitalício
           </p>
 
+          <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-6 w-full">
+            Quero o kit completo
+          </CtaButton>
+
+          <p className="mt-3 font-body text-[12px] text-muted">
+            Pix · Cartão · Compra segura · Acesso imediato
+          </p>
+
           <hr className="my-5 border-bordersoft" />
 
           <ul className="flex flex-col gap-2.5 text-left">
@@ -134,14 +142,6 @@ export default function Planos() {
               </li>
             ))}
           </ul>
-
-          <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-6 w-full">
-            Quero o kit completo
-          </CtaButton>
-
-          <p className="mt-3 font-body text-[12px] text-muted">
-            Pix · Cartão · Compra segura · Acesso imediato
-          </p>
         </div>
       </Reveal>
     </Section>
