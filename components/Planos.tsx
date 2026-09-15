@@ -136,7 +136,7 @@ export default function Planos() {
           </ul>
 
           <CtaButton href={CHECKOUT_URL_COMPLETO} className="mt-6 w-full">
-            Quero o kit completo por R$ 27,90
+            Quero o kit completo
           </CtaButton>
 
           <p className="mt-3 font-body text-[12px] text-muted">
