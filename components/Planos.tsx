@@ -109,7 +109,11 @@ export default function Planos() {
             />
           </div>
 
-          <p className="mt-5 font-body text-[14px] text-red-600 line-through">
+          <p className="mt-4 font-body text-[13.5px] text-muted">
+            O kit completo pra transformar suas sessões
+          </p>
+
+          <p className="mt-4 font-body text-[14px] text-red-600 line-through">
             R$ 219,90
           </p>
           <p className="mt-1 font-heading text-[13px] font-bold uppercase tracking-wide text-muted">
@@ -118,7 +122,10 @@ export default function Planos() {
           <p className="mt-0.5 font-heading text-[40px] font-bold text-brand">
             R$ 27,90
           </p>
-          <p className="mt-1.5 font-body text-[12.5px] text-muted">
+          <p className="mt-1.5 font-body text-[13px] font-semibold text-green-700">
+            Você economiza R$ 192,00
+          </p>
+          <p className="mt-1 font-body text-[12.5px] text-muted">
             pagamento único · acesso imediato · acesso vitalício
           </p>
 
