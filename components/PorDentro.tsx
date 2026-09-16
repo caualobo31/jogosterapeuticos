@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Script from "next/script";
 import Section from "./Section";
 import Reveal from "./Reveal";
 import CtaButton from "./CtaButton";
+import VideoDemo from "./VideoDemo";
 
 const jogosDestaque = [
   {
@@ -39,24 +39,7 @@ export default function PorDentro() {
           você pode levar os jogos direto para a sessão.
         </p>
 
-        <div
-          className="relative mx-auto mt-8 w-full max-w-[360px] overflow-hidden rounded-card shadow-lg shadow-brand/15 sm:max-w-[400px]"
-          style={{ aspectRatio: "9 / 16" }}
-        >
-          <iframe
-            src="https://player.vimeo.com/video/1227485998?badge=0&autopause=0&player_id=0&app_id=58479"
-            className="absolute inset-0 h-full w-full border-0"
-            frameBorder={0}
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            title="jogos terapeutas"
-          />
-        </div>
-        <Script
-          id="vimeo-player-api"
-          src="https://player.vimeo.com/api/player.js"
-          strategy="lazyOnload"
-        />
+        <VideoDemo />
 
         <p className="mt-8 font-heading text-[14px] font-semibold text-graphite">
           Alguns dos jogos que você encontra no acervo:
