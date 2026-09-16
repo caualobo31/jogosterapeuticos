@@ -1,25 +1,90 @@
+import Image from "next/image";
+import Script from "next/script";
 import Section from "./Section";
 import Reveal from "./Reveal";
-import Carrossel from "./Carrossel";
 import CtaButton from "./CtaButton";
+
+const jogosDestaque = [
+  {
+    src: "/images/carrossel/02-trilha-dos-sons.webp",
+    alt: "Jogo Trilha dos Sons, de consciência fonológica, impresso",
+  },
+  {
+    src: "/images/carrossel/07-bingo-ortografico.webp",
+    alt: "Bingo Ortográfico, jogo de Disortografia",
+  },
+  {
+    src: "/images/carrossel/04-domino-quantidades.webp",
+    alt: "Dominó de quantidades, jogo de Discalculia",
+  },
+  {
+    src: "/images/carrossel/03-memoria-dislexia.webp",
+    alt: "Jogo da memória de Dislexia, cartas prontas para recortar",
+  },
+];
 
 export default function PorDentro() {
   return (
     <Section bg="tint">
       <Reveal>
-        <h2 className="font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
-          Veja <span className="text-brand">por dentro</span> do material
+        <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
+          Veja por dentro
+        </p>
+        <h2 className="mt-2 font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
+          Veja como os jogos funcionam{" "}
+          <span className="text-brand">na prática</span>
         </h2>
         <p className="mx-auto mt-4 max-w-[440px] font-body text-[15px] leading-relaxed text-muted">
-          Um gostinho do que chega até você: jogo por jogo, pronto pra
-          imprimir, recortar e aplicar na sessão.
+          Conheça o material por dentro, veja como ele é organizado e como
+          você pode levar os jogos direto para a sessão.
         </p>
 
-        <Carrossel />
+        <div
+          className="relative mx-auto mt-8 w-full max-w-[360px] overflow-hidden rounded-card shadow-lg shadow-brand/15 sm:max-w-[400px]"
+          style={{ aspectRatio: "9 / 16" }}
+        >
+          <iframe
+            src="https://player.vimeo.com/video/1227485998?badge=0&autopause=0&player_id=0&app_id=58479"
+            className="absolute inset-0 h-full w-full border-0"
+            frameBorder={0}
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="jogos terapeutas"
+          />
+        </div>
+        <Script
+          id="vimeo-player-api"
+          src="https://player.vimeo.com/api/player.js"
+          strategy="lazyOnload"
+        />
+
+        <p className="mt-8 font-heading text-[14px] font-semibold text-graphite">
+          Alguns dos jogos que você encontra no acervo:
+        </p>
+
+        <div className="mx-auto mt-4 grid max-w-[520px] grid-cols-2 gap-3 sm:grid-cols-4">
+          {jogosDestaque.map((jogo) => (
+            <div
+              key={jogo.src}
+              className="relative aspect-[3/4] overflow-hidden rounded-card border border-bordersoft bg-warmwhite shadow-sm shadow-brand/10"
+            >
+              <Image
+                src={jogo.src}
+                alt={jogo.alt}
+                fill
+                sizes="(min-width: 640px) 130px, 45vw"
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
 
         <CtaButton href="#planos" className="mt-8">
-          Quero os 50 jogos
+          Quero acessar os jogos
         </CtaButton>
+        <p className="mx-auto mt-3 max-w-[340px] font-body text-[12px] text-muted">
+          +50 jogos terapêuticos · acesso imediato · impressão ilimitada
+        </p>
       </Reveal>
     </Section>
   );
