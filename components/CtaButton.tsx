@@ -19,9 +19,9 @@ export default function CtaButton({
 }: CtaButtonProps) {
   const styles =
     variant === "primary"
-      ? "inline-block rounded-card px-8 py-3.5 text-center font-heading text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.99] bg-gradient-to-r from-brand-dark to-brand-vivid text-white shadow-lg shadow-brand/25"
+      ? "inline-block rounded-card px-10 py-[18px] text-center font-heading text-base font-semibold transition-transform hover:scale-[1.02] active:scale-[0.99] bg-gradient-to-r from-brand-dark to-brand-vivid text-white shadow-lg shadow-brand/25"
       : variant === "secondary"
-        ? "inline-block rounded-card px-8 py-3.5 text-center font-heading text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.99] bg-brand-lavender text-graphite"
+        ? "inline-block rounded-card px-10 py-[18px] text-center font-heading text-base font-semibold transition-transform hover:scale-[1.02] active:scale-[0.99] bg-brand-lavender text-graphite"
         : "inline-block font-body text-[13px] text-muted underline-offset-2 hover:underline";
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
