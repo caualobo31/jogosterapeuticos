@@ -19,7 +19,7 @@ export default function Hero() {
       <Section bg="cream" className="pt-6">
         <Reveal>
           <span className="mb-3 inline-block rounded-full bg-brand-tint2 px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-[0.5px] text-brand">
-            Método Ludo-Argentino
+            Exclusivo para Psicopedagogas
           </span>
 
           <h1 className="font-heading text-[26px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[32px]">
