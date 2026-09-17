@@ -1,15 +1,42 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Script from "next/script";
 import { Play } from "lucide-react";
 
-const VIMEO_SRC =
-  "https://player.vimeo.com/video/1227485998?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1";
+type VimeoPlayer = {
+  setVolume: (value: number) => Promise<number>;
+  play: () => Promise<void>;
+};
+
+declare global {
+  interface Window {
+    Vimeo?: {
+      Player: new (element: HTMLIFrameElement) => VimeoPlayer;
+    };
+  }
+}
+
+const VIMEO_EMBED_URL =
+  "https://player.vimeo.com/video/1227485998?badge=0&autopause=0&player_id=0&app_id=58479";
 
 export default function VideoDemo() {
   const [tocando, setTocando] = useState(false);
+  const [scriptPronto, setScriptPronto] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  useEffect(() => {
+    if (!tocando || !scriptPronto) return;
+    const iframe = iframeRef.current;
+    if (!iframe || !window.Vimeo) return;
+
+    const player = new window.Vimeo.Player(iframe);
+    player
+      .setVolume(1)
+      .then(() => player.play())
+      .catch(() => {});
+  }, [tocando, scriptPronto]);
 
   return (
     <div
@@ -19,7 +46,8 @@ export default function VideoDemo() {
       {tocando ? (
         <>
           <iframe
-            src={VIMEO_SRC}
+            ref={iframeRef}
+            src={VIMEO_EMBED_URL}
             className="absolute inset-0 h-full w-full border-0"
             frameBorder={0}
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
@@ -29,7 +57,8 @@ export default function VideoDemo() {
           <Script
             id="vimeo-player-api"
             src="https://player.vimeo.com/api/player.js"
-            strategy="lazyOnload"
+            strategy="afterInteractive"
+            onLoad={() => setScriptPronto(true)}
           />
         </>
       ) : (
