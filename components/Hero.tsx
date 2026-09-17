@@ -28,12 +28,9 @@ export default function Hero() {
             <span className="text-brand">dificuldade de aprendizagem</span>
           </h1>
 
-          <p className="mx-auto mt-4 max-w-[440px] font-heading text-[16px] font-semibold leading-snug text-muted sm:text-[17px]">
-            Fundamentados na{" "}
-            <strong className="font-bold text-brand">
-              escola argentina de psicopedagogia
-            </strong>
-            , o berço da profissão, adaptados ao consultório brasileiro.
+          <p className="mx-auto mt-4 max-w-[440px] font-body text-[15px] leading-relaxed text-muted sm:text-[16px]">
+            Escolha a dificuldade, imprima o jogo e leve para a sessão um
+            recurso com objetivo claro e aplicação simples.
           </p>
 
           <Image
