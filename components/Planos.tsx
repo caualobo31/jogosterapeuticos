@@ -120,10 +120,10 @@ export default function Planos() {
             Hoje por
           </p>
           <p className="mt-0.5 font-heading text-[40px] font-bold text-brand">
-            R$ 27,90
+            R$ 37,90
           </p>
           <p className="mt-1.5 font-body text-[13px] font-semibold text-green-700">
-            Você economiza R$ 192,00
+            Você economiza R$ 182,00
           </p>
           <p className="mt-1 font-body text-[12.5px] text-muted">
             pagamento único · acesso imediato · acesso vitalício
