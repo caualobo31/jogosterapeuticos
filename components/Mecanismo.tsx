@@ -42,12 +42,6 @@ export default function Mecanismo() {
           </strong>{" "}
           e organizados para a prática no consultório brasileiro.
         </p>
-        <p className="mx-auto mt-2 max-w-[440px] font-body text-[14px] leading-relaxed text-muted">
-          Cada material trabalha habilidades específicas e fica separado por
-          dificuldade para você encontrar rapidamente o que precisa usar na
-          sessão.
-        </p>
-
         <div className="mx-auto mt-8 grid max-w-[560px] grid-cols-2 gap-3 sm:grid-cols-3">
           {categorias.map(({ titulo, desc }) => (
             <div
