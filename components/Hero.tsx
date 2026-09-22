@@ -24,7 +24,8 @@ export default function Hero() {
 
           <h1 className="font-heading text-[24px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[30px]">
             Trabalhe <span className="text-brand">aprendizagem</span> sem
-            transformar a sessão em outra sala de aula
+            transformar a sessão em outra{" "}
+            <span className="text-pink">sala de aula</span>
           </h1>
 
           <p className="mx-auto mt-3 max-w-[420px] font-heading text-[15px] font-bold uppercase leading-snug tracking-wide text-brand sm:text-[17px]">
