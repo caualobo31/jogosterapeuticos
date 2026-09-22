@@ -22,15 +22,14 @@ export default function Hero() {
             Exclusivo para Psicopedagogas
           </span>
 
-          <h1 className="font-heading text-[26px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[32px]">
-            <span className="text-brand">+50 jogos terapêuticos</span>{" "}
-            prontos para cada{" "}
-            <span className="text-brand">dificuldade de aprendizagem</span>
+          <h1 className="font-heading text-[24px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[30px]">
+            Trabalhe <span className="text-brand">aprendizagem</span> sem
+            transformar a sessão em outra sala de aula
           </h1>
 
-          <p className="mx-auto mt-4 max-w-[440px] font-body text-[15px] leading-relaxed text-muted sm:text-[16px]">
-            Escolha a dificuldade, imprima o jogo e leve para a sessão um
-            recurso com objetivo claro e aplicação simples.
+          <p className="mx-auto mt-3 max-w-[420px] font-heading text-[15px] font-bold uppercase leading-snug tracking-wide text-brand sm:text-[17px]">
+            +50 jogos terapêuticos prontos para cada dificuldade de
+            aprendizagem
           </p>
 
           <Image
