@@ -23,14 +23,19 @@ export default function Hero() {
           </span>
 
           <h1 className="font-heading text-[24px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[30px]">
-            Trabalhe <span className="text-brand">aprendizagem</span> sem
-            transformar a sessão em outra{" "}
-            <span className="text-pink">sala de aula</span>
+            Trabalhe{" "}
+            <span className="underline decoration-brand decoration-[3px] underline-offset-4">
+              aprendizagem
+            </span>{" "}
+            sem transformar a sessão em outra{" "}
+            <span className="underline decoration-brand decoration-[3px] underline-offset-4">
+              sala de aula
+            </span>
           </h1>
 
-          <p className="mx-auto mt-3 max-w-[420px] font-heading text-[15px] font-bold uppercase leading-snug tracking-wide text-brand sm:text-[17px]">
-            +50 jogos terapêuticos prontos para cada dificuldade de
-            aprendizagem
+          <p className="mx-auto mt-3 max-w-[420px] font-heading text-[15px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[17px]">
+            <span className="text-brand">+50 jogos terapêuticos</span>{" "}
+            prontos para cada dificuldade de aprendizagem
           </p>
 
           <Image
