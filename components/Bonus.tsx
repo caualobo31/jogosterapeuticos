@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Section from "./Section";
 import Reveal from "./Reveal";
+import CtaButton from "./CtaButton";
 
 const bonus = [
   {
@@ -76,6 +77,10 @@ export default function Bonus() {
             </div>
           ))}
         </div>
+
+        <CtaButton href="#planos" className="mt-8">
+          Quero acessar os jogos
+        </CtaButton>
       </Reveal>
     </Section>
   );
