@@ -29,12 +29,8 @@ export default function Planos() {
   return (
     <Section bg="cream" id="planos">
       <Reveal>
-        <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
+        <h2 className="mx-auto max-w-[480px] font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
           Veja quanto tudo isso custaria separado
-        </p>
-        <h2 className="mx-auto mt-2 max-w-[480px] font-heading text-[22px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[24px]">
-          <span className="text-brand">Mais de 50 jogos +bônus</span> por
-          menos do que você pagaria em um único material físico
         </h2>
         <p className="mx-auto mt-3 max-w-[420px] font-body text-[13.5px] leading-relaxed text-muted">
           Em vez de comprar jogos e recursos separadamente, você leva tudo em
