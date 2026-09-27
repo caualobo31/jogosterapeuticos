@@ -78,7 +78,7 @@ export default function Bonus() {
           ))}
         </div>
 
-        <CtaButton href="#planos" className="mt-8">
+        <CtaButton href="#oferta" className="mt-8">
           Quero acessar os jogos
         </CtaButton>
       </Reveal>

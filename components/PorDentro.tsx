@@ -25,7 +25,7 @@ const jogosDestaque = [
 
 export default function PorDentro() {
   return (
-    <Section bg="tint">
+    <Section bg="tint" id="por-dentro">
       <Reveal>
         <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
           Veja por dentro
@@ -62,7 +62,7 @@ export default function PorDentro() {
           ))}
         </div>
 
-        <CtaButton href="#planos" className="mt-8">
+        <CtaButton href="#bonus" className="mt-8">
           Quero acessar os jogos
         </CtaButton>
         <p className="mx-auto mt-3 max-w-[340px] font-body text-[12px] text-muted">

@@ -94,7 +94,10 @@ export default function Planos() {
           <OfferCountdownPill />
         </div>
 
-        <div className="relative mx-auto max-w-[380px] rounded-card border-2 border-brand bg-warmwhite p-7 text-center shadow-xl shadow-brand/15">
+        <div
+          id="oferta"
+          className="relative mx-auto max-w-[380px] rounded-card border-2 border-brand bg-warmwhite p-7 text-center shadow-xl shadow-brand/15"
+        >
           <p className="font-heading text-[16px] font-bold uppercase tracking-wide text-graphite">
             Kit de Jogos Terapêuticos Completo
           </p>

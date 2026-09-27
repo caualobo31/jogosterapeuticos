@@ -59,7 +59,7 @@ export default function Hero() {
             ))}
           </div>
 
-          <CtaButton href="#planos" className="mt-8">
+          <CtaButton href="#por-dentro" className="mt-8">
             Quero os 50 jogos
           </CtaButton>
 
