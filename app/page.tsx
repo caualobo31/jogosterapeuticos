@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import PorDentro from "@/components/PorDentro";
 import Agitacao from "@/components/Agitacao";
-import Virada from "@/components/Virada";
 import Mecanismo from "@/components/Mecanismo";
 import Passos from "@/components/Passos";
 import Depoimentos from "@/components/Depoimentos";
@@ -16,7 +15,6 @@ export default function Home() {
       <Hero />
       <PorDentro />
       <Agitacao />
-      <Virada />
       <Mecanismo />
       <Passos />
       <Depoimentos />

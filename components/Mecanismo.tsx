@@ -27,7 +27,7 @@ const categorias = [
 
 export default function Mecanismo() {
   return (
-    <Section bg="cream">
+    <Section bg="cream" id="mecanismo">
       <Reveal>
         <p className="font-heading text-[12px] font-semibold uppercase tracking-[0.5px] text-brand">
           Não são fichas

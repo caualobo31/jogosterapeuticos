@@ -31,11 +31,6 @@ export default function Hero() {
             imprimíveis para diferentes dificuldades de aprendizagem
           </p>
 
-          <p className="mx-auto mt-3 max-w-[420px] font-body text-[14px] leading-relaxed text-muted sm:text-[15px]">
-            Tenha recursos prontos para trabalhar leitura, atenção, memória,
-            matemática, escrita e outras habilidades de forma mais dinâmica.
-          </p>
-
           <Image
             src="/images/hero-mockup.webp"
             alt="Kit +50 Jogos Terapêuticos: caixa premium, cartas, cadernos de atividades, fichas e peças do material impresso"
@@ -44,6 +39,11 @@ export default function Hero() {
             priority
             className="mx-auto mt-6 h-auto w-full max-w-[380px] sm:max-w-[460px]"
           />
+
+          <p className="mx-auto mt-4 max-w-[420px] font-body text-[14px] leading-relaxed text-muted sm:text-[15px]">
+            Tenha recursos prontos para trabalhar leitura, atenção, memória,
+            matemática, escrita e outras habilidades de forma mais dinâmica.
+          </p>
 
           <div className="mx-auto mt-6 grid max-w-md grid-cols-2 gap-x-4 gap-y-3 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-6">
             {features.map(({ icon: Icon, label }) => (

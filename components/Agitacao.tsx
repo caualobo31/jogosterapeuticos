@@ -30,7 +30,7 @@ export default function Agitacao() {
           ))}
         </ul>
 
-        <ScrollCue to="virada" label="Ver a próxima seção" />
+        <ScrollCue to="mecanismo" label="Ver a próxima seção" />
       </Reveal>
     </Section>
   );
