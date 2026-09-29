@@ -23,19 +23,17 @@ export default function Hero() {
           </span>
 
           <h1 className="font-heading text-[24px] font-bold uppercase leading-tight tracking-wide text-graphite sm:text-[30px]">
-            <span className="text-brand">+50 jogos terapêuticos</span>{" "}
-            imprimíveis para aplicar em diversas dificuldades
+            Nunca mais fique sem saber o que colocar na mesa.
           </h1>
 
           <p className="mx-auto mt-3 max-w-[420px] font-heading text-[15px] font-bold uppercase leading-snug tracking-wide text-graphite sm:text-[17px]">
-            Trabalhe{" "}
-            <span className="underline decoration-brand decoration-[3px] underline-offset-4">
-              aprendizagem
-            </span>{" "}
-            sem transformar a sessão em outra{" "}
-            <span className="underline decoration-brand decoration-[3px] underline-offset-4">
-              sala de aula
-            </span>
+            <span className="text-brand">+50 jogos terapêuticos</span>{" "}
+            imprimíveis para diferentes dificuldades de aprendizagem
+          </p>
+
+          <p className="mx-auto mt-3 max-w-[420px] font-body text-[14px] leading-relaxed text-muted sm:text-[15px]">
+            Tenha recursos prontos para trabalhar leitura, atenção, memória,
+            matemática, escrita e outras habilidades de forma mais dinâmica.
           </p>
 
           <Image
@@ -62,10 +60,6 @@ export default function Hero() {
           <CtaButton href="#por-dentro" className="mt-8">
             Quero os 50 jogos
           </CtaButton>
-
-          <p className="mx-auto mt-7 max-w-[380px] font-editorial text-[15px] italic leading-relaxed text-muted">
-            Você já tem o olhar clínico. Agora tem o material para o como.
-          </p>
         </Reveal>
       </Section>
     </>

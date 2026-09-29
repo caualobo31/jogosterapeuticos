@@ -28,8 +28,8 @@ const perguntas = [
     a: "Acesso imediato após a compra, direto no seu e-mail.",
   },
   {
-    q: "Qual a diferença entre Básico e Completo?",
-    a: "O Básico são os 50 jogos com as regras. O Completo inclui o guia com o que observar, fichas de registro, roteiro de devolutiva e planejamentos de sessão.",
+    q: "Posso imprimir os jogos mais de uma vez?",
+    a: "Sim. O acesso é vitalício e você pode imprimir novamente sempre que precisar para uso nos seus atendimentos.",
   },
 ];
 

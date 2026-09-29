@@ -30,15 +30,6 @@ export default function Agitacao() {
           ))}
         </ul>
 
-        <p className="mx-auto mt-7 max-w-[440px] font-body text-[14.5px] leading-relaxed text-muted">
-          <strong className="font-semibold text-graphite">
-            A maior parte dos psicopedagogos se sente sem saber como
-            intervir.
-          </strong>{" "}
-          O problema não é falta de conhecimento. É a falta de material
-          pronto para cada dificuldade que chega até você.
-        </p>
-
         <ScrollCue to="virada" label="Ver a próxima seção" />
       </Reveal>
     </Section>

@@ -17,10 +17,6 @@ export default function Virada() {
           Você já sabe o porquê. Faltava{" "}
           <span className="text-brand">o como</span>.
         </h2>
-        <p className="mx-auto mt-4 max-w-[440px] font-body text-[15px] leading-relaxed text-muted">
-          Não é mais teoria que falta. É o instrumento certo na mão,
-          organizado por dificuldade, sem inventar na hora.
-        </p>
 
         <CtaButton href="#planos" className="mt-7">
           Quero sair do improviso

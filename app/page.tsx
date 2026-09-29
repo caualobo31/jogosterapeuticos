@@ -7,7 +7,6 @@ import Passos from "@/components/Passos";
 import Depoimentos from "@/components/Depoimentos";
 import Bonus from "@/components/Bonus";
 import Planos from "@/components/Planos";
-import Beneficios from "@/components/Beneficios";
 import Faq from "@/components/Faq";
 import CtaFinal from "@/components/CtaFinal";
 
@@ -23,7 +22,6 @@ export default function Home() {
       <Depoimentos />
       <Bonus />
       <Planos />
-      <Beneficios />
       <Faq />
       <CtaFinal />
     </main>

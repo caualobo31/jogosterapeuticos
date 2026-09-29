@@ -36,11 +36,9 @@ export default function Mecanismo() {
           São <span className="text-brand">jogos de verdade</span>, organizados por dificuldade
         </h2>
         <p className="mx-auto mt-4 max-w-[440px] font-body text-[14px] leading-relaxed text-muted">
-          Jogos adaptados a partir de referências da{" "}
-          <strong className="font-semibold text-brand">
-            tradição argentina de psicopedagogia
-          </strong>{" "}
-          e organizados para a prática no consultório brasileiro.
+          Cada jogo trabalha habilidades específicas e está organizado por
+          dificuldade para você encontrar rapidamente o recurso que faz
+          sentido para aquela sessão.
         </p>
         <div className="mx-auto mt-8 grid max-w-[560px] grid-cols-2 gap-3 sm:grid-cols-3">
           {categorias.map(({ titulo, desc }) => (
